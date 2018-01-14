@@ -1,61 +1,55 @@
 {
   "_args": [
     [
-      "cordova-plugin-media@^3.0.1",
-      "/media/robert/Volume1/www/d7mobilecordova"
+      "cordova-plugin-media@5.0.1",
+      "/media/robert/Volume1/www/cordovademo"
     ]
   ],
-  "_from": "cordova-plugin-media@>=3.0.1 <4.0.0",
-  "_id": "cordova-plugin-media@3.0.1",
+  "_from": "cordova-plugin-media@5.0.1",
+  "_id": "cordova-plugin-media@5.0.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/cordova-plugin-media",
-  "_nodeVersion": "6.10.1",
+  "_nodeVersion": "8.2.1",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/cordova-plugin-media-3.0.1.tgz_1493685767701_0.2465546082239598"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-media-5.0.1.tgz_1514690893048_0.4805873774457723"
   },
   "_npmUser": {
-    "email": "maj.fil@gmail.com",
-    "name": "filmaj"
+    "email": "simon.macdonald@gmail.com",
+    "name": "macdonst"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
     "name": "cordova-plugin-media",
-    "raw": "cordova-plugin-media@^3.0.1",
-    "rawSpec": "^3.0.1",
+    "raw": "cordova-plugin-media@5.0.1",
+    "rawSpec": "5.0.1",
     "scope": null,
-    "spec": ">=3.0.1 <4.0.0",
-    "type": "range"
+    "spec": "5.0.1",
+    "type": "version"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-media/-/cordova-plugin-media-3.0.1.tgz",
-  "_shasum": "5e46e76cfa77d4ed28a87598cb0728e4ebab6f27",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-media/-/cordova-plugin-media-5.0.1.tgz",
+  "_shasum": "d78fdeb7f687b63b7fc014e1ceee2fc8cf8a4d49",
   "_shrinkwrap": null,
-  "_spec": "cordova-plugin-media@^3.0.1",
-  "_where": "/media/robert/Volume1/www/d7mobilecordova",
+  "_spec": "cordova-plugin-media@5.0.1",
+  "_where": "/media/robert/Volume1/www/cordovademo",
   "author": {
     "name": "Apache Software Foundation"
   },
   "bugs": {
-    "url": "https://github.com/apache/cordova-plugin-media/issues"
+    "url": "https://issues.apache.org/jira/browse/CB"
   },
   "cordova": {
     "id": "cordova-plugin-media",
     "platforms": [
       "android",
-      "amazon-fireos",
-      "ubuntu",
+      "browser",
       "ios",
-      "blackberry10",
-      "wp7",
-      "wp8",
-      "windows8",
-      "windows",
-      "tizen"
+      "windows"
     ]
   },
   "dependencies": {},
@@ -65,8 +59,8 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "5e46e76cfa77d4ed28a87598cb0728e4ebab6f27",
-    "tarball": "https://registry.npmjs.org/cordova-plugin-media/-/cordova-plugin-media-3.0.1.tgz"
+    "shasum": "d78fdeb7f687b63b7fc014e1ceee2fc8cf8a4d49",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-media/-/cordova-plugin-media-5.0.1.tgz"
   },
   "engines": {
     "cordovaDependencies": {
@@ -74,6 +68,9 @@
         "cordova-android": ">=6.1.0"
       },
       "4.0.0": {
+        "cordova-android": ">=6.3.0"
+      },
+      "6.0.0": {
         "cordova": ">100"
       }
     }
@@ -84,41 +81,39 @@
     "media",
     "ecosystem:cordova",
     "cordova-android",
-    "cordova-amazon-fireos",
-    "cordova-ubuntu",
+    "cordova-browser",
     "cordova-ios",
-    "cordova-blackberry10",
-    "cordova-wp7",
-    "cordova-wp8",
-    "cordova-windows8",
-    "cordova-windows",
-    "cordova-tizen"
+    "cordova-windows"
   ],
   "license": "Apache-2.0",
   "maintainers": [
     {
+      "email": "simon.macdonald@gmail.com",
+      "name": "macdonst"
+    },
+    {
       "email": "bowserj@apache.org",
       "name": "bowserj"
-    },
-    {
-      "email": "csantana23@gmail.com",
-      "name": "csantanapr"
-    },
-    {
-      "email": "maj.fil@gmail.com",
-      "name": "filmaj"
-    },
-    {
-      "email": "kotikov.vladimir@gmail.com",
-      "name": "kotikov.vladimir"
     },
     {
       "email": "purplecabbage@gmail.com",
       "name": "purplecabbage"
     },
     {
+      "email": "maj.fil@gmail.com",
+      "name": "filmaj"
+    },
+    {
       "email": "shazron@gmail.com",
       "name": "shazron"
+    },
+    {
+      "email": "csantana23@gmail.com",
+      "name": "csantanapr"
+    },
+    {
+      "email": "kotikov.vladimir@gmail.com",
+      "name": "kotikov.vladimir"
     },
     {
       "email": "stevengill97@gmail.com",
@@ -137,5 +132,5 @@
     "test": "npm run jshint"
   },
   "types": "./types/index.d.ts",
-  "version": "3.0.1"
+  "version": "5.0.1"
 }

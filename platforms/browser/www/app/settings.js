@@ -14,6 +14,7 @@ Drupal.settings.debug = true;
 
 /* DRUPAL PATHS */
  
+
 // Site Path (do not use a trailing slash)
 Drupal.settings.site_path = 'https://demo.awri.ch'; // e.g. http://www.example.com
 

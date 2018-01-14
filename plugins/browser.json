@@ -19,9 +19,6 @@
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "ch.awri"
         },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "ch.awri"
-        },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "ch.awri"
         },
@@ -31,9 +28,6 @@
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "ch.awri"
         },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "ch.awri.mobile"
-        },
         "cordova-plugin-printer": {
             "PACKAGE_NAME": "ch.awri.mobile"
         },
@@ -41,6 +35,15 @@
             "PACKAGE_NAME": "ch.awri.mobile"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "ch.awri.mobile"
         }
     },
