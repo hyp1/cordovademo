@@ -305,30 +305,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "id": "cordova-plugin-media.MediaError",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "id": "cordova-plugin-media.Media",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/browser/Media.js",
-        "id": "cordova-plugin-media.BrowserMedia",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
         "id": "cordova-plugin-media-capture.CaptureAudioOptions",
         "pluginId": "cordova-plugin-media-capture",
@@ -412,8 +388,7 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.1.6",
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-file": "6.0.1",
-    "cordova-plugin-media": "5.0.1",
-    "cordova-plugin-media-capture": "3.0.2-dev"
+    "cordova-plugin-media-capture": "3.0.1"
 }
 // BOTTOM OF METADATA
 });

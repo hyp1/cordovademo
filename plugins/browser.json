@@ -40,9 +40,6 @@
         "cordova-plugin-file": {
             "PACKAGE_NAME": "ch.awri.mobile"
         },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "ch.awri.mobile"
-        },
         "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "ch.awri.mobile"
         }
