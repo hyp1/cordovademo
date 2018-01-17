@@ -14,9 +14,8 @@ Drupal.settings.debug = true;
 
 /* DRUPAL PATHS */
  
-
 // Site Path (do not use a trailing slash)
-Drupal.settings.site_path = 'https://demo.awri.ch'; // e.g. http://www.example.com
+Drupal.settings.site_path = 'http://kimo2007.dnshome.de:8888/dmt'; // e.g. http://www.example.com
 
 // Default Services Endpoint Path
 Drupal.settings.endpoint = 'drupalgap';
@@ -26,6 +25,7 @@ Drupal.settings.file_public_path = 'sites/default/files';
 //Drupal.settings.file_private_path = 'system/files';
 
 // The Default Language Code
+//Drupal.settings.language_default = 'en';
 Drupal.settings.language_default = 'und';
 
 /* CACHING AND PERFORMANCE */
@@ -107,7 +107,7 @@ drupalgap.settings.mode = 'phonegap';
 
 // Language Files - locale/[language-code].json
 drupalgap.settings.locale = {
-   /* es: { } */
+  /*  de: { } */
 };
 
 drupalgap.settings.flag = {
@@ -116,7 +116,7 @@ drupalgap.settings.flag = {
 		};
 
 drupalgap.settings.facebook = {
-  app_id: '126766317359254',
+  app_id: '462046410863439',
   scope: 'email'
 };
 
@@ -127,16 +127,16 @@ drupalgap.settings.facebook = {
  *************/
 
 // App Title
-drupalgap.settings.title = 'D7Mobile';
+drupalgap.settings.title = 'Drupal Mobile Tools(DMT)';
  
 // App Front Page
-drupalgap.settings.front = 'dashboard';
+drupalgap.settings.front = 'dmt_dashboard';
 
 // Theme
 drupalgap.settings.theme = 'easystreet3';
 
 // Logo
-drupalgap.settings.logo = 'themes/easystreet3/images/drupalgap.jpg';
+drupalgap.settings.logo = 'images/dmt_logo_black.png';
 
 // Offline Warning Message. Set to false to hide message.
 drupalgap.settings.offline_message = 'No connection found!';
@@ -179,16 +179,23 @@ Drupal.modules.contrib['entityreference'] = {};
 Drupal.modules.contrib['pathfix'] = {};
 Drupal.modules.contrib['media'] = {};
 Drupal.modules.contrib['geofield'] = {};
-Drupal.modules.contrib['addressfield'] = {};
+//Drupal.modules.contrib['addressfield'] = {};
 
 /** Custom Modules - www/app/modules/custom **/
+//D7Mobile
+Drupal.modules.custom['dmt'] = {};
+Drupal.modules.custom['map'] = {};
+Drupal.modules.custom['dmt_menu'] = {};
+drupalgap.settings.dmt_menu = {		 
+		attributes: {
+         "style":"position:relative",          
+         "data-icon": 'star',
+           "data-iconpos": 'notext',
+           "data-mini": 'true',
+           "class": 'ui-btn-left',  //ui-btn-right         	                
+          }
+          };
 
-Drupal.modules.custom['my_module'] = {};
-
-
-/** Custom Modules - www/app/modules/custom **/
-
-//Drupal.modules.custom['my_module'] = {};
 
 /***************************************|
  * Menus - http://drupalgap.org/node/85 |
@@ -270,8 +277,20 @@ drupalgap.settings.menus['main_menu'] = {
         }
       }
     },
- {
-      title:'Map',
+
+     {
+      title:'Search',
+      path:'search/node/',
+      options:{
+        attributes: {
+          'data-icon': 'search',
+          'class': 'ui-btn ui-btn-icon-right'
+        }
+      }
+    },
+  
+   {
+      title:'Position',
       path:'map',
       options:{
         attributes:{
@@ -279,6 +298,7 @@ drupalgap.settings.menus['main_menu'] = {
         }
       }
     },
+
     {
       title:'Taxonomy',
       path:'taxonomy/vocabularies',
@@ -320,6 +340,7 @@ drupalgap.settings.blocks.easystreet3 = {
         mode: 'include',
       }
     },
+
     main_menu: { }
   },
   sub_header: {
@@ -329,17 +350,24 @@ drupalgap.settings.blocks.easystreet3 = {
     primary_local_tasks: { }
   },
   content: {
-    messages: { },
-search: {
+  messages: { },
+  search: {
       pages: {
         value: ['dashboard'],
         mode: 'include'
       }
     },
-    main: { }
+  main: { }
   },
-  footer: {
-    powered_by: { }
+  footer: {   
+//DMT Menu
+  dmt_menu: {
+      pages: {
+        value: [drupalgap.settings.front],
+	mode: 'include'
+	     }	
+  },
+//powered_by: { }
   }
 };
 

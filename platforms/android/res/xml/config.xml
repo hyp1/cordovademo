@@ -36,12 +36,12 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>AwriMobile</name>
+    <name>DMT</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Drupal Mobile Tools Demo Application.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="robert_schweng@hotmail.com" href="https://demo.awri.ch">
+        Robert Schweng
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -51,6 +51,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="icon.png" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
 </widget>

@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-
 <widget id="ch.awri.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-<preference name="phonegap-version" value="cli-7.1.0" />
-    <name>AwriMobile</name>
+    <preference name="phonegap-version" value="cli-7.1.0" />
+    <name>DMT</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Drupal Mobile Tools Demo Application.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="robert_schweng@hotmail.com" href="https://demo.awri.ch">
+        Robert Schweng
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -24,6 +23,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <icon src="icon.png" />
     <engine name="android" spec="^6.3.0" />
     <plugin name="cordova-plugin-camera" spec="^2.3.0" />
     <plugin name="cordova-plugin-compat" spec="~1.1.0" />
