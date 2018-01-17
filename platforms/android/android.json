@@ -119,40 +119,40 @@
     },
     "installed_plugins": {
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-printer": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "ch.awri.mobile"
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         }
     },
     "dependent_plugins": {},
