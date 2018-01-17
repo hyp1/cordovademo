@@ -15,7 +15,7 @@ Drupal.settings.debug = true;
 /* DRUPAL PATHS */
  
 // Site Path (do not use a trailing slash)
-Drupal.settings.site_path = 'http://kimo2007.dnshome.de:8888/dmt'; // e.g. http://www.example.com
+Drupal.settings.site_path = 'https://demo.awri.ch'; // e.g. http://www.example.com
 
 // Default Services Endpoint Path
 Drupal.settings.endpoint = 'drupalgap';
