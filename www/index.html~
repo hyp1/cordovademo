@@ -2,7 +2,7 @@
 <html>
     <head>
     
-      <title>Drupal Mobile Tools</title>
+      <title>DrupalGap</title>
 
       <meta charset="utf-8" />
       <meta name="format-detection" content="telephone=no" />
@@ -14,10 +14,7 @@
       <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
       <script src="jquery-1.9.1.min.js"></script>
       <script src="jquery.mobile-1.4.5.min.js"></script>
-<!--TEST Google Robert Schweng -->
-      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-      <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyC3xc3hRoqhHOkutqBh4jPN0cQgkWjmPRI"></script>
-
+      
       <!-- jDrupal -->
       <script type="text/javascript" charset="utf-8" src="jdrupal-7.0.5.min.js"></script>
       <!-- DrupalGap -->
@@ -25,28 +22,58 @@
       <script type="text/javascript" charset="utf-8" src="app/settings.js"></script>
       <link rel="stylesheet" href="css/drupalgap.css" />
 
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALG7XUaPx559b4HAGIJh1fL4MWAFeLMQQ"></script>
+
     </head>
     <body>
+<!-- Load Cordova
+<script src="cordova.js"></script>
+ -->
       <!-- Mobile Application Splash Screen -->
       <div id="_drupalgap_splash" data-role="page">
-         <div data-role="header" data-theme="b"><h2>DMT</h2></div>
+         <div data-role="header" data-theme="b"><h2>DrupalGap</h2></div>
          <div class="ui-content" data-role="content">
             <div id="_drupalgap_splash_content">
-              <img src="images/dmt_logo_black.png" alt="Drupal Mobile Tools" style="position: absolute; top: 50%; left: 50%; margin-left: -64px; margin-top: -64px;" />
+              <img src="images/drupalgap.jpg" alt="DrupalGap" style="position: absolute; top: 50%; left: 50%; margin-left: -64px; margin-top: -64px;" />
             </div>
          </div>
       </div>
-
-
-<!-- Load Cordova -->
-<script src="cordova.js"></script>
-
 <!-- Load OpenFB -->
 <script src="openfb.js"></script>
+<script type="text/javascript" charset="utf-8">
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.device.capture);
+captureVideo();
+}
+
+// capture callback
+var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+        path = mediaFiles[i].fullPath;
+alert(path);
+        // do something interesting with the file
+    }
+};
+
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+
+function captureVideo(){
+// start audio capture
+navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:1});
+}
+   
+    </script>
 
       <!-- Load DrupalGap -->
       <script type="text/javascript">
         drupalgap_onload();
       </script>
+
     </body>
 </html>
+

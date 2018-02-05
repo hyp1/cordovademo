@@ -223,7 +223,7 @@ function flag_load(fid) {
  * @returns {String}
  */
 function flag_quick_link(flag_name, entity_type, entity_id, flagged) {
-  return l('Do it', null, {
+  return bl('Do it', null, {
     attributes: {
       onclick: _flag_quick_link_onclick_attribute(flag_name, entity_type, entity_id, flagged),
       'data-theme': _flag_quick_link_data_theme(flagged)
@@ -324,6 +324,7 @@ function theme_flag(variables) {
  */
 function flag_is_flagged(flag_name, entity_id, uid, options) {
   try {
+	  console.log(options);
     options.method = 'POST';
     options.path = 'flag/is_flagged.json';
     options.service = 'flag';

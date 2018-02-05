@@ -11,11 +11,14 @@ Drupal.settings.debug = true;
 /****************************************|
  * Drupal Settings (provided by jDrupal) |
  ****************************************/
+Drupal.settings.update_url = 'https://awri.ch/app/update';
+Drupal.settings.info_url = 'https://awri.ch/app/info';
 
 /* DRUPAL PATHS */
  
+
 // Site Path (do not use a trailing slash)
-Drupal.settings.site_path = 'https://demo.awri.ch'; // e.g. http://www.example.com
+Drupal.settings.site_path = 'https://awri.ch'; // e.g. http://www.example.com
 
 // Default Services Endpoint Path
 Drupal.settings.endpoint = 'drupalgap';
@@ -25,8 +28,7 @@ Drupal.settings.file_public_path = 'sites/default/files';
 //Drupal.settings.file_private_path = 'system/files';
 
 // The Default Language Code
-//Drupal.settings.language_default = 'en';
-Drupal.settings.language_default = 'und';
+Drupal.settings.language_default = 'de';
 
 /* CACHING AND PERFORMANCE */
 
@@ -107,7 +109,7 @@ drupalgap.settings.mode = 'phonegap';
 
 // Language Files - locale/[language-code].json
 drupalgap.settings.locale = {
-  /*  de: { } */
+    de: { } 
 };
 
 drupalgap.settings.flag = {
@@ -116,7 +118,7 @@ drupalgap.settings.flag = {
 		};
 
 drupalgap.settings.facebook = {
-  app_id: '462046410863439',
+  app_id: '126766317359254',
   scope: 'email'
 };
 
@@ -127,22 +129,26 @@ drupalgap.settings.facebook = {
  *************/
 
 // App Title
-drupalgap.settings.title = 'Drupal Mobile Tools(DMT)';
+drupalgap.settings.title = 'AWRIMobile';
  
 // App Front Page
-drupalgap.settings.front = 'dmt_dashboard';
-
+drupalgap.settings.front = 'start';
+//drupalgap.settings.front = 'testpubsub';
 // Theme
-drupalgap.settings.theme = 'easystreet3';
-
+drupalgap.settings.theme = 'app_theme';
+drupalgap.theme = {
+		    theme_header: 'b',
+		    theme_content: 'a',
+		    theme_footer: 'b',
+		  };
 // Logo
-drupalgap.settings.logo = 'images/dmt_logo_black.png';
+drupalgap.settings.logo = 'images/re_logo640.jpg';
 
 // Offline Warning Message. Set to false to hide message.
-drupalgap.settings.offline_message = 'No connection found!';
+drupalgap.settings.offline_message = 'Keine Verbindung zu '+Drupal.settings.site_path+'... !';
 
 // Exit app message.
-drupalgap.settings.exit_message = 'Exit ' + drupalgap.settings.title + '?';
+drupalgap.settings.exit_message = '' + drupalgap.settings.title + ' schliessen?';
 
 // Loader Animations - http://demos.jquerymobile.com/1.4.0/loader/
 drupalgap.settings.loader = {
@@ -169,7 +175,6 @@ drupalgap.settings.loader = {
 
 /** Contributed Modules - www/app/modules **/
 
-//Drupal.modules.contrib['example'] = {};
 Drupal.modules.contrib['facebook'] = {};
 Drupal.modules.contrib['date'] = {};
 Drupal.modules.contrib['fivestar'] = {};
@@ -178,13 +183,25 @@ Drupal.modules.contrib['avatar'] = {};
 Drupal.modules.contrib['entityreference'] = {};
 Drupal.modules.contrib['pathfix'] = {};
 Drupal.modules.contrib['media'] = {};
-Drupal.modules.contrib['geofield'] = {};
-//Drupal.modules.contrib['addressfield'] = {};
+
 
 /** Custom Modules - www/app/modules/custom **/
-//D7Mobile
-Drupal.modules.custom['dmt'] = {};
-Drupal.modules.custom['map'] = {};
+
+;
+Drupal.modules.custom['start'] = {};
+Drupal.modules.custom['suche'] = {};
+Drupal.modules.custom['stellen'] = {};
+Drupal.modules.custom['inhalt'] = {};
+Drupal.modules.custom['lesezeichen'] = {};
+Drupal.modules.custom['mobile_update'] = {};
+Drupal.modules.custom['mobile_info'] = {};
+
+Drupal.modules.custom['nodetest'] = {};
+Drupal.modules.custom['nodeedit'] = {};
+Drupal.modules.custom['upload'] = {};
+Drupal.modules.custom['createfrage'] = {};
+Drupal.modules.custom['testpubsub'] = {};
+
 Drupal.modules.custom['dmt_menu'] = {};
 drupalgap.settings.dmt_menu = {		 
 		attributes: {
@@ -195,6 +212,11 @@ drupalgap.settings.dmt_menu = {
            "class": 'ui-btn-left',  //ui-btn-right         	                
           }
           };
+
+Drupal.modules.custom['mobile_update'] = {};
+drupalgap.settings.mobile_update = {
+	auto:true
+};
 
 
 /***************************************|
@@ -242,7 +264,8 @@ drupalgap.settings.menus['user_menu_authenticated'] = {
         }
       }
     },
- {
+ /*
+    {
       title: 'Picture',
       path: 'avatar',
       options: {
@@ -251,6 +274,7 @@ drupalgap.settings.menus['user_menu_authenticated'] = {
         }
       }
     },
+   */
     {
       title: 'Logout',
       path: 'user/logout',
@@ -259,64 +283,78 @@ drupalgap.settings.menus['user_menu_authenticated'] = {
           'data-icon': 'delete'
         }
       }
-    }
+    },
+    
+    {
+        title:'Info',
+        path:'mobile_info',
+        options:{
+          attributes: {
+            'data-icon': 'grid',
+            'class': 'ui-btn ui-btn-icon-right'
+          }
+        }
+      },
+
+    
   ]
 };
 
 // Main Menu
 drupalgap.settings.menus['main_menu'] = {
   options: menu_popup_get_default_options(),
-  links: [
+  links: [          
+            
     {
-      title:'Content',
-      path:'node',
+      title:'Rechtsfragen',
+      path:'inhalt',
       options:{
         attributes: {
-          'data-icon': 'star',
+          'data-icon': 'grid',
           'class': 'ui-btn ui-btn-icon-right'
         }
       }
     },
-
-     {
-      title:'Search',
-      path:'search/node/',
-      options:{
-        attributes: {
-          'data-icon': 'search',
-          'class': 'ui-btn ui-btn-icon-right'
-        }
-      }
-    },
-  
-   {
-      title:'Position',
-      path:'map',
+ 
+    {
+      title:'Suchen',
+      path:'suche',
       options:{
         attributes:{
-          'data-icon':'star'
+          'data-icon':'search'
         }
       }
     },
-
+    
+    {
+        title:'Frage stellen',
+        path:'createfrage',
+        options:{
+          attributes:{
+            'data-icon':'comment'
+          }
+        }
+      },
+      
+      {
+          title:'Lesezeichen',
+          path:'lesezeichen',
+          options:{
+            attributes:{
+              'data-icon':'tag'
+            }
+          }
+        },
+    
     {
       title:'Taxonomy',
       path:'taxonomy/vocabularies',
       options:{
         attributes:{
-          'data-icon':'grid'
+          'data-icon':'bullets'
         }
       }
     },
-    {
-      title:'Users',
-      path:'user-listing',
-      options:{
-        attributes:{
-          'data-icon':'info'
-        }
-      }
-    }
   ]
 };
 
@@ -326,7 +364,7 @@ drupalgap.settings.menus['main_menu'] = {
 drupalgap.settings.blocks = {}; // Do not remove this line.
 
 // Easy Street 3 Theme Blocks
-drupalgap.settings.blocks.easystreet3 = {
+drupalgap.settings.blocks.app_theme = {
   header: {
     user_menu_anonymous: {
       roles: {
@@ -334,42 +372,46 @@ drupalgap.settings.blocks.easystreet3 = {
         mode: 'include',
       }
     },
+    inhalt_block:{},
     user_menu_authenticated: {
       roles: {
         value: ['authenticated user'],
         mode: 'include',
       }
     },
-
     main_menu: { }
   },
   sub_header: {
-    title: { }
+    title: { },
+ 
   },
   navigation: {
-    primary_local_tasks: { }
+    primary_local_tasks: { },
   },
   content: {
-  messages: { },
-  search: {
-      pages: {
-        value: ['dashboard'],
-        mode: 'include'
-      }
-    },
-  main: { }
+    messages: { },
+    main: { },
+
   },
-  footer: {   
-//DMT Menu
-  dmt_menu: {
-      pages: {
-        value: [drupalgap.settings.front],
-	mode: 'include'
-	     }	
-  },
-//powered_by: { }
+
+  footer: {
+	  dmt_menu: {
+		   pages: {
+		        value: [drupalgap.settings.front],
+		        mode: 'include'
+		      }	
+	},
+//	start_footer: { },
+	 // powered_by: { }
+    control_block:{
+   	 pages: {
+   	        value: ['inhalt','node/*','suche','createfrage'],
+   	        mode: 'include'
+   	      }
+   },
   }
 };
+
 
 /****************************************************|
  * Region Menu Links - http://drupalgap.org/node/173 |
@@ -392,12 +434,14 @@ drupalgap.settings.menus.regions['header'] = {
     },
     /* Home Button */
     {
-      path: '',
+      path: '#',
       options: {
         attributes: {
           'data-icon': 'home',
           'data-iconpos': 'notext',
-          'class': 'ui-btn-left'
+          'class': 'ui-btn-left',
+          'onclick':"pubsub.trigger('main-menu-clicked', { 'page':'root','action':'Home' } )",
+
         }
       },
       pages: {
@@ -438,10 +482,12 @@ drupalgap.settings.menus.regions['header'] = {
   ]
 };
 
+
 // Footer Region Links
 drupalgap.settings.menus.regions['footer'] = {
-  links: [
+  links: [      
     /* Back Button */
+    
     {
       options: {
         attributes: {
@@ -452,11 +498,12 @@ drupalgap.settings.menus.regions['footer'] = {
         }
       },
       pages: {
-        value: [''],
-        mode: 'exclude'
+        value: ['suche','lesezeichen'],
+        mode: 'include'
       }
-    }
-  ]
+    },
+    
+  ],
 };
 
 /*********|

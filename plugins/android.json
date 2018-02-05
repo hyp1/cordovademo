@@ -42,6 +42,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "ch.awri.cordovademo"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         }
     },
     "dependent_plugins": {}

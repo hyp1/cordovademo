@@ -8,18 +8,27 @@ and add links to content to the Menu
 The links are mapped to drupalgap system forms
 and views
 
+enable dmt:menu in drupalgap service resources
+
 ## settings.js
 
 
 //Menu Icon setzen
 
-drupalgap.settings.d7mobilemenu = {
-		icon:'star'
-};
+Drupal.modules.custom['dmt_menu'] = {};
+drupalgap.settings.dmt_menu = {		 
+		attributes: {
+         "style":"position:relative",          
+         "data-icon": 'star',
+           "data-iconpos": 'notext',
+           "data-mini": 'true',
+           "class": 'ui-btn-left',  //ui-btn-right         	                
+          }
+          };
 
 //Block zur startpage hinzufügen
 
-d7mobilemenu: {
+dmt_menu: {
   pages: {
         value: ['dashboard'],
         mode: 'include'

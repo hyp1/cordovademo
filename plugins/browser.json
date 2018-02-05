@@ -42,6 +42,9 @@
         },
         "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "ch.awri.cordovademo"
         }
     },
     "dependent_plugins": {
