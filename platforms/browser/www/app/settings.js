@@ -132,7 +132,7 @@ drupalgap.settings.facebook = {
 drupalgap.settings.title = 'AWRIMobile';
  
 // App Front Page
-drupalgap.settings.front = 'start';
+drupalgap.settings.front = 'suche';
 //drupalgap.settings.front = 'testpubsub';
 // Theme
 drupalgap.settings.theme = 'app_theme';
@@ -153,17 +153,17 @@ drupalgap.settings.exit_message = '' + drupalgap.settings.title + ' schliessen?'
 // Loader Animations - http://demos.jquerymobile.com/1.4.0/loader/
 drupalgap.settings.loader = {
   loading: {
-    text: 'Loading...',
+    text: 'Lade...',
     textVisible: true,
     theme: 'b'
   },
   saving: {
-    text: 'Saving...',
+    text: 'Speichere...',
     textVisible: true,
     theme: 'b'
   },
   deleting: {
-    text: 'Deleting...',
+    text: 'Lösche...',
     textVisible: true,
     theme: 'b'
   }
@@ -193,9 +193,10 @@ Drupal.modules.custom['suche'] = {};
 Drupal.modules.custom['stellen'] = {};
 Drupal.modules.custom['inhalt'] = {};
 Drupal.modules.custom['lesezeichen'] = {};
-Drupal.modules.custom['mobile_update'] = {};
-Drupal.modules.custom['mobile_info'] = {};
+//Drupal.modules.custom['mobile_update'] = {};
+//Drupal.modules.custom['mobile_info'] = {};
 
+//Drupal.modules.custom['speech'] = {};
 Drupal.modules.custom['nodetest'] = {};
 Drupal.modules.custom['nodeedit'] = {};
 Drupal.modules.custom['upload'] = {};

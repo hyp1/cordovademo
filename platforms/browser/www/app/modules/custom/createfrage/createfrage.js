@@ -45,6 +45,15 @@ function createfrage_page() {
 	try {
 		var content = {};
 		
+		content['field_kanton'] = {
+				  theme: 'select',
+				  attributes:{
+					  id:'field_kanton',
+				  },
+				  options: {
+				  },
+				};
+		
 		content['service_label'] = {
 				  theme: 'form_element_label',
 				  element: {
@@ -79,6 +88,7 @@ function createfrage_page() {
 				  }
 				};
 		
+			
 		
 		content['fbid'] = {
 				 'theme': 'textfield',				 
@@ -144,10 +154,14 @@ function toggleAnonym(){
 
 function saveNode() {
 	body=$('textarea#body').val();
+//	alert($('select#field_kanton').val());
+//	return;
 	if(body=='' || body-length < 10){
+		$('textarea#body').focus();
 		drupalgap_alert('Bitte geben sie eine Frage ein.');
 		return;
 	}
+	var lang=Drupal.settings.language_default;
 	//alert(body);
 	field_image={
 			und:{}
@@ -159,20 +173,21 @@ str="";
 	};	
 
 	node={
+			'language':'und',
 			'title':body.substring(0,255),
 			'type':'rechtsfrage',
 			  body: {und:{0:{ value: body,      		                   
               }}},
 			'field_image':field_image,
-			  'field_fbname': {und:{0:{ value: $('#fbname').val(),      		                   
-              }}},
-              'field_fbid': {und:{0:{ value: $('#fbid').val(),      		                   
-              }}},
-			
-	}
+//			  'field_fbname': {und:{0:{ value: $('#fbname').val(),      		                   
+//             }}},
+ //             'field_fbid': {und:{0:{ value: $('#fbid').val(),      		                               	          
+ //             }}},
+              'field_kanton': {und:{ tid: $('select#field_kanton').val(),      		                   
+              }}
+	};
 
-	dpm(node);
-//return ;
+
 	node_save(node,{success:function(data){
 		console.log(data,'node gespeichert!');
 		for(i=0;i<fields;i++){
@@ -212,6 +227,31 @@ function createfrage_pageshow() {
 	}
 		$('#fbid').hide();
 		$('#fbname').hide();
+		
+		var query = {
+				  parameters: {
+				    vid: 3,								    
+				  },
+				  options:{name:'ASC'},
+		    pagesize: 27,
+				};
+				taxonomy_term_index(query, {
+				    success: function(terms) {
+				      if (terms.length == 0) { return; }
+				    var items=[];
+				      for(i=0;i<terms.length;i++){
+				    console.log(terms[i]);
+				    $('#field_kanton').append($('<option>', { 
+				        value: terms[i].tid,
+				        text : '('+terms[i].name+ ')  ' +terms[i].description 
+				    }));
+				    
+				     }
+				      
+				 //     alert('Loaded ' + terms.length + ' term(s)!');
+				    }
+				});
+				
 		
 		//say, in some place, you subscibe a event
 		pubsub.on('upload-clicked', {somedata: "good day"}, function(e){

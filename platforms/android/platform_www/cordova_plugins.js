@@ -230,6 +230,22 @@ module.exports = [
     "runs": true
   },
   {
+    "id": "cordova-plugin-file-transfer.FileTransferError",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransferError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransfer",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransfer"
+    ]
+  },
+  {
     "id": "cordova-plugin-geolocation.geolocation",
     "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
     "pluginId": "cordova-plugin-geolocation",
@@ -347,6 +363,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-speechrecognition.SpeechRecognition",
+    "file": "plugins/cordova-plugin-speechrecognition/www/speechRecognition.js",
+    "pluginId": "cordova-plugin-speechrecognition",
+    "merges": [
+      "window.plugins.speechRecognition"
+    ]
+  },
+  {
     "id": "cordova-plugin-vibration.notification",
     "file": "plugins/cordova-plugin-vibration/www/vibration.js",
     "pluginId": "cordova-plugin-vibration",
@@ -356,19 +380,33 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-file-transfer.FileTransferError",
-    "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
-    "pluginId": "cordova-plugin-file-transfer",
+    "id": "cordova-plugin-app-version.AppVersionPlugin",
+    "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
+    "pluginId": "cordova-plugin-app-version",
     "clobbers": [
-      "window.FileTransferError"
+      "cordova.getAppVersion"
     ]
   },
   {
-    "id": "cordova-plugin-file-transfer.FileTransfer",
-    "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
-    "pluginId": "cordova-plugin-file-transfer",
+    "id": "es6-promise-plugin.Promise",
+    "file": "plugins/es6-promise-plugin/www/promise.js",
+    "pluginId": "es6-promise-plugin",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-x-socialsharing.SocialSharing",
+    "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+    "pluginId": "cordova-plugin-x-socialsharing",
     "clobbers": [
-      "window.FileTransfer"
+      "window.plugins.socialsharing"
+    ]
+  },
+  {
+    "id": "cordova-plugin-splashscreen.SplashScreen",
+    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+    "pluginId": "cordova-plugin-splashscreen",
+    "clobbers": [
+      "navigator.splashscreen"
     ]
   }
 ];
@@ -380,14 +418,19 @@ module.exports.metadata =
   "cordova-plugin-device": "1.1.7",
   "cordova-plugin-dialogs": "1.3.4",
   "cordova-plugin-file": "6.0.1",
+  "cordova-plugin-file-transfer": "1.7.1",
   "cordova-plugin-geolocation": "2.4.3",
   "cordova-plugin-inappbrowser": "1.7.2",
   "cordova-plugin-media-capture": "3.0.1",
   "cordova-plugin-network-information": "1.3.4",
   "cordova-plugin-printer": "0.7.3",
+  "cordova-plugin-speechrecognition": "1.1.2",
   "cordova-plugin-vibration": "2.1.6",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-plugin-file-transfer": "1.7.1"
+  "cordova-plugin-app-version": "0.1.9",
+  "es6-promise-plugin": "4.1.0",
+  "cordova-plugin-x-socialsharing": "5.2.1",
+  "cordova-plugin-splashscreen": "5.0.2"
 };
 // BOTTOM OF METADATA
 });

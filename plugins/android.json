@@ -8,44 +8,60 @@
     },
     "installed_plugins": {
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
+            "PACKAGE_NAME": "ch.awri.mobile"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
+            "PACKAGE_NAME": "ch.awri.mobile"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
+            "PACKAGE_NAME": "ch.awri.mobile"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
+            "PACKAGE_NAME": "ch.awri.mobile"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
-        },
-        "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
-        },
-        "cordova-plugin-printer": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
-        },
-        "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
+            "PACKAGE_NAME": "ch.awri.mobile"
         },
         "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "ch.awri.cordovademo"
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-printer": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-speechrecognition": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ch.awri.mobile"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "ch.awri.mobile"
+        }
+    }
 }

@@ -580,6 +580,7 @@ function start_services_postprocess(options, result) {
 
 		if (options.service == 'user' && options.resource == 'register') {
 			if (result.status == 401) {
+				console.log(result);
 				alert("Es gab ein Problem, bitte wenden Sie sich an einen Administrator");
 			} else {
 				variable_set('system', result);

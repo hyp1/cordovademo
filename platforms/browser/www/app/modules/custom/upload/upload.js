@@ -10,7 +10,7 @@ function upload_install() {
 function upload_menu() {
   var items = {};
   items['upload'] = {
-    title: 'Upload',
+    title: 'Hochladen',
     page_callback: 'drupalgap_get_form',
     page_arguments: ['upload_custom_form'],
   };
@@ -166,20 +166,24 @@ form.elements[id+'_image']={
 function _createFormElements(elems,name,nr){	
 	var img=name+'-'+nr;
 
+
 	
 	elems[upload_container_id(name,nr)+'_start']={
-			markup:'<div  id="'+upload_container_id(name,nr)+'_start" "style":"background-color:green;">',
+			markup:'<div  id="'+upload_container_id(name,nr)+'_start">',
 	};
 	
+	elems[upload_container_id(name,nr)+'_header']={
+			markup:'<h2 class="title">Sie können noch '+(5-nr)+' Fotos hochladen.</h2>',
+};
 	
 	elems[upload_container_id(name,nr)+'_image']={
 			markup:'<div style="display:none;"><canvas id="'+upload_container_id(name,nr)+'_canvas"></canvas></div><img id="'+upload_container_id(name,nr)+'_image">',
-			prefix:'<video style="display:none;" width="320" height="240" id="'+upload_container_id(name,nr)+'_video" style="background-color:green;" autoplay playsinline></video>'
+			prefix:'<video style="display:none;" width="'+constraints.width+'" height="'+constraints.height+'" id="'+upload_container_id(name,nr)+'_video" style="background-color:green;" autoplay playsinline></video>'
 	};
 	
 	elems[upload_container_id(name,nr)+'_snapshot']={
 			type:'button',
-			text:'Snapshot',
+			text:'Schnappschuss',
 			attributes:{
 				id:upload_container_id(name,nr)+'_snapshot',
 				onclick:'getSnapshot(\''+upload_container_id(name,nr)+'\',\''+nr+'\');return false;',		
@@ -211,7 +215,7 @@ function _createFormElements(elems,name,nr){
 	
 	elems[upload_container_id(name,nr)+'_upload']={
 			type:'button',
-			text:'Upload',
+			text:'Hochladen',
 			attributes:{
 				id:upload_container_id(name,nr)+'_upload',
 				onclick:'uploadFile(\''+upload_container_id(name,nr)+'\',\''+name+'['+nr+']\');return false;',
@@ -222,7 +226,7 @@ function _createFormElements(elems,name,nr){
 	
 	elems[upload_container_id(name,nr)+'_delete']={
 			type:'button',
-			text:'Delete',
+			text:'Löschen',
 			attributes:{
 				id:upload_container_id(name,nr)+'_delete',
 				onclick:'deleteFile(\''+upload_container_id(name,nr)+'\',\''+name+'['+nr+']\');return false;',
@@ -427,8 +431,8 @@ var fid=$("input[id=\'"+name+"\']").val();
 var contraints = window.constraints = {
 		   audio: false,
 		   video: true,
-		   width: 320,
-		   height: 240
+		   width: 1024,
+		   height: 1024
 		 };
 
 
@@ -458,15 +462,17 @@ function getSnapshot(id,nr){
 
 
 function getPicture(id, nr){
+    image = document.querySelector('img#'+id+'_image');
+    
 	if(drupalgap.settings.mode=='phonegap'){
 		cordova_camera_click(id,nr);
 		return;		
 	}
 	
+
 	video=document.querySelector('video#'+id+'_video');
     $('#'+id+'_video').show();
 	ctx = document.querySelector('canvas#'+id+'_canvas');
-    image = document.querySelector('img#'+id+'_image');
 
 	 video.addEventListener('loadedmetadata',function()
 	      {
@@ -575,8 +581,8 @@ function cordova_camera_click(id,nr) {
 
 	      // Success
 	      function(imageURI) {
-	    //	  $('#'+id+'_image').attr('src','data:image/jpeg;base64,' + imageURI).trigger('create');
-	    	 $('#'+id+'_file').val('camera_'+time()+'.jpg');
+	    	  $('#'+id+'_image').attr('src','data:image/jpeg;base64,' + imageURI).trigger('create');
+	    //	 $('#'+id+'_file').val('camera_'+time()+'.jpg');
 	    	  $('#'+id+'_upload').show();
 //	    	  drupalgap_toast(t('Picture saved!'));
 	      },

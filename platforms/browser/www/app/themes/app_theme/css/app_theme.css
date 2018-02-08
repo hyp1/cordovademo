@@ -44,3 +44,11 @@ background-image:url('../images/awri32-black.png');
 .field-name-upload-createfrage-field-image-5-start{
 	display:none;
 }
+.splash{
+	background-image:url("../images/splash.png");
+	 background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+.body{
+	font-family: 'Oswald', sans-serif;
