@@ -197,8 +197,8 @@ Drupal.modules.custom['lesezeichen'] = {};
 //Drupal.modules.custom['mobile_info'] = {};
 
 //Drupal.modules.custom['speech'] = {};
-Drupal.modules.custom['nodetest'] = {};
-Drupal.modules.custom['nodeedit'] = {};
+//Drupal.modules.custom['nodetest'] = {};
+//Drupal.modules.custom['nodeedit'] = {};
 Drupal.modules.custom['upload'] = {};
 Drupal.modules.custom['createfrage'] = {};
 Drupal.modules.custom['testpubsub'] = {};
