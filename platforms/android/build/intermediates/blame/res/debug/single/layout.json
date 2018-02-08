@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/layout/select_printer_activity.xml",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/layout/select_printer_activity.xml"
+    },
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/layout/printer_list_item.xml",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/layout/printer_list_item.xml"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_previous_item.png",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/drawable-hdpi/ic_action_previous_item.png"
+    },
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_remove.png",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/drawable-hdpi/ic_action_remove.png"
+    },
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_next_item.png",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/drawable-hdpi/ic_action_next_item.png"
+    }
+]

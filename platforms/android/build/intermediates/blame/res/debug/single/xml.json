@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/xml/provider_paths.xml"
+    },
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/xml/sharing_paths.xml",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/xml/sharing_paths.xml"
+    },
+    {
+        "merged": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/build/intermediates/res/merged/debug/xml/config.xml",
+        "source": "/media/robert/Volume1/www/stage.awri.ch/cordova/platforms/android/res/xml/config.xml"
+    }
+]
